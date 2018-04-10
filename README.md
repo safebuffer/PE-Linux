@@ -23,7 +23,7 @@ New Linux Privilege Escalation Tool
 * List Are Open For Updates :) 
 
 
-```
+
 [Twitter](https://twitter.com/wazehell)
-```
+
 
