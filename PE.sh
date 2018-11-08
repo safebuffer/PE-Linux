@@ -10,7 +10,7 @@ rzltsdir="Reports"
 if [ -d "$rzltsdir" ]; then
   echo -e ""
 else
-echo -e "\033[0;41m############# Report is Directory : /Report \033[0m" 
+echo -e "\033[0;41m############# Reporting Directory : /Report \033[0m" 
     mkdir "$rzltsdir"
 fi
 }
@@ -1490,12 +1490,11 @@ checkCow()
 }
 
 passwords_gar(){
-                          echo -e "\e[00;34m#########################################################\e[00m" 
-
+                      echo -e "\e[00;34m#########################################################\e[00m" 
                       echo -e "\e[00;31m################# Passwords Lookup ######################\e[00m" 
                       echo -e "\e[00;34m#########################################################\e[00m" 
                       echo -e "\e[00;34m#########################################################\e[00m" 
-
+                      
 umaskdef=`grep -i "^UMASK" /etc/login.defs 2>/dev/null`
 logindefs=`grep "^PASS_MAX_DAYS\|^PASS_MIN_DAYS\|^PASS_WARN_AGE\|^ENCRYPT_METHOD" /etc/login.defs 2>/dev/null`
 lolzz=`grep -r -E -l -i -s 'pass=|pwd=|log=|login=|user=|username=|pw=|passw=|passwd=|password=|pass:|user:|username:|password:|login:|pass |user ' /etc/ > passwordfiles.txt 2>/dev/null`
@@ -1515,11 +1514,10 @@ lolzz=`grep -r -E -l -i -s 'pass=|pwd=|log=|login=|user=|username=|pw=|passw=|pa
       fi
     done
 if [ "$umaskdef" ]; then
-
   echo -e "\e[00;31mumask value as specified in /etc/login.defs:\e[00m\n$umaskdef" 
 fi
 if [ "$logindefs" ]; then
-                          echo -e "\e[00;34m#########################################################\e[00m" 
+echo -e "\e[00;34m#########################################################\e[00m" 
 
   echo -e "\e[00;31mPassword and storage information:\e[00m\n$logindefs" 
 fi
