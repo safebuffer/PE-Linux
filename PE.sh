@@ -1370,9 +1370,9 @@ if [ "$dddd" ]; then
 else 
   :
 fi
-hostn=`uname -n 2>/dev/null`
+hostnamed=`uname -n 2>/dev/null`
 if [ "$hostnamed" ]; then
-  echo -e "\e[00;31mHostname:\e[00m $hostn" 
+  echo -e "\e[00;31mHostname:\e[00m $hostnamed" 
   echo -e "\e[00;34m#########################################################\e[00m" 
 else 
   :
